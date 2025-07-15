@@ -6,40 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoLink</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full bg-white shadow-lg px-20 py-8 flex justify-between items-center z-50">
-        <div class="text-xl font-bold">EcoLink</div>
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-lg px-20 py-2 flex justify-between items-center z-50">
+        <div class="flex items-center">
+            <a href="index.html"><img src="logo ecolink resmi[1].png" alt="EcoLink Logo" class="h-20 w-50"></a>
+        </div>
         <div class="space-x-10">
-            <a href="#" class="hover:underline">Pelaporan</a>
+            <a href="pelaporan.html" class="hover:underline">Pelaporan</a>
             <a href="#" class="hover:underline">LeaderBoard</a>
-            <a href="#" class="hover:underline">EcoMart</a>
+            <a href="ecomart.html" class="hover:underline">EcoMart</a>
             <a href="#" class="hover:underline">Komunitas</a>
         </div>
     </nav>
 
-    <!-- Section -->
-    <section class="bg-green-500 text-white min-h-screen flex items-center">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center">
+    <!-- Hero Section with Background Image -->
+    <section class="relative h-screen">
+        <!-- Gambar background -->
+        <div class="absolute inset-0 bg-cover bg-center z-0"
+            style="background-image: url('full-shot-people-collecting-garbage.jpg');">
+        </div>
 
-            <!-- Gambar -->
-            <div class="md:w-1/2 mb-6 md:mb-0">
-                <img src="https://via.placeholder.com/500x300" alt="Gambar Pembuka" class="rounded-lg shadow-lg w-full">
-            </div>
+        <!-- Overlay hijau transparan -->
+        <div class="absolute inset-0 bg-green-500/60 z-10"></div>
 
-            <!-- Teks Pembuka -->
-            <div class="md:w-1/2 md:pl-10">
-                <h1 class="text-4xl font-bold mb-4">Selamat Datang!</h1>
-                <p class="text-lg leading-relaxed">Website kami menyajikan pengalaman terbaik dengan layanan modern dan
-                    berkualitas tinggi. Ayo mulai jelajahi sekarang!</p>
+        <!-- Teks di tengah -->
+        <div class="relative z-20 flex items-center justify-center h-full text-center px-4">
+            <div>
+                <h1 class="text-4xl font-bold text-white mb-4">Laporkan Sampah Mu <br> Bersihkan Lingkungan Mu</h1>
             </div>
         </div>
     </section>
 
+
     <section>
-        <h2>Layanan</h2>
+        <div class="relative text-4xl font-bold mt-10 px-20">
+            <h2>Layanan</h2>
+        </div>
+        <div class="px-20 mb-10 te">
+            <p>Lapor dan Daur Ulang Sampah Mu</p>
+        </div>
     </section>
 </body>
 
