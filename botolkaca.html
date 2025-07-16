@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Botol Kaca</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ["Montserrat", "sans-serif"],
+                    },
+                    colors: {
+                        mygreen: "#6DCE4D",
+                        myblue: "#27405A",
+                        mygray: "#656565",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body>
+    <nav class="w-full flex items-center justify-between bg-white px-6 py-3 shadow-md">
+        <div class="flex items-center gap-4">
+            <a href="javascript:history.back()"
+                class="border-2 group inline-flex items-center px-4 py-2 rounded-lg transition hover:bg-gray-200">
+                <!-- Panah Kiri -->
+                <svg class="w-5 h-5 mr-2 transform transition-transform duration-300 group-hover:-translate-x-1"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+                Kembali
+            </a>
+            <h2 class="text-myblue font-bold text-xl">Jenis Sampah</h2>
+        </div>
+    </nav>
+
+    <!-- main content -->
+    <section class="mt-14">
+        <div class="flex items-center px-20 mb-14">
+            <img src="gambar/botolkaca.png" alt="Kertas" class="h-14">
+            <div class="text-4xl font-bold px-4 mb-2">
+                <span class="text-myblue">Botol Kaca</span>
+            </div>
+        </div>
+
+        <!-- card -->
+        <!-- Tombol Geser -->
+        <div class="flex justify-end gap-2 px-4 mb-4">
+            <button type="button" onclick="slideLeft()" class="bg-gray-200 hover:bg-gray-300 p-2 rounded-full">
+                <!-- Heroicon kiri -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button type="button" onclick="slideRight()" class="bg-gray-200 hover:bg-gray-300 p-2 rounded-full">
+                <!-- Heroicon kanan -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Wrapper untuk 4 Card -->
+        <div class="overflow-hidden px-4">
+            <div class="max-w-[1080px] mx-auto">
+                <div id="cardSlider" class="flex transition-transform duration-500 ease-in-out">
+                    <!-- koran -->
+                    <div class="min-w-[250px] max-w-[250px] mx-2 border rounded-2xl">
+                        <img src="gambar/botol_kecap.jpg" alt="" class="w-full h-40 object-cover rounded-t-2xl">
+                        <h2 class="text-center font-bold py-2">Botol KEcap</h2>
+                    </div>
+                    <!-- buku bekas -->
+                    <div class="min-w-[250px] max-w-[250px] mx-2 border rounded-2xl">
+                        <img src="gambar/botol_saus.jpg" alt="" class="w-full h-40 object-cover rounded-t-2xl">
+                        <h2 class="text-center font-bold py-2">Botol Saos</h2>
+                    </div>
+                    <!-- kertas putih -->
+                    <div class="min-w-[250px] max-w-[250px] mx-2 border rounded-2xl">
+                        <img src="gambar/botol_sirup_dht.jpg" alt="" class="w-full h-40 object-cover rounded-t-2xl">
+                        <h2 class="text-center font-bold py-2">Botol Sirup DHT</h2>
+                    </div>
+                    <!-- kertas warna -->
+                    <div class="min-w-[250px] max-w-[250px] mx-2 border rounded-2xl">
+                        <img src="gambar/botol_bir_besar.jpg" alt="" class="w-full h-40 object-cover rounded-t-2xl">
+                        <h2 class="text-center font-bold py-2">Botol Minuman Keras Besar</h2>
+                    </div>
+                    <!-- kertas buram -->
+                    <div class="min-w-[250px] max-w-[250px] mx-2 border rounded-2xl">
+                        <img src="gambar/botol_bir_kecil.jpg" alt="" class="w-full h-40 object-cover rounded-t-2xl">
+                        <h2 class="text-center font-bold py-2">Botol Minuman Keras Kecil</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Script untuk scroll geser -->
+        <script>
+            let scrollIndex = 0;
+            const cardWidth = 266; // 250 + mx-2 (8px kiri + kanan = 16)
+
+            function slideRight() {
+                const container = document.getElementById("cardSlider");
+                const totalCards = container.children.length;
+                const maxScroll = totalCards - 4;
+
+                if (scrollIndex < maxScroll) {
+                    scrollIndex++;
+                    container.style.transform = `translateX(-${scrollIndex * cardWidth}px)`;
+                }
+            }
+
+            function slideLeft() {
+                const container = document.getElementById("cardSlider");
+
+                if (scrollIndex > 0) {
+                    scrollIndex--;
+                    container.style.transform = `translateX(-${scrollIndex * cardWidth}px)`;
+                }
+            }
+        </script>
+    </section>
+</body>
+
+</html>
