@@ -1,68 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EcoLink</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Custom Tailwind Configuration -->
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        montserrat: ['Montserrat', 'sans-serif']
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              montserrat: ["Montserrat", "sans-serif"],
+            },
+            colors: {
+              mygreen: "#6DCE4D",
+              myblue: "#27405A",
+              mygray: "#656565",
+            },
+          },
+        },
+      };
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full bg-white shadow-lg px-20 py-2 flex justify-between items-center z-50">
-        <div class="flex items-center">
-            <a href="index.html"><img src="logo ecolink resmi[1].png" alt="EcoLink Logo" class="h-20 w-50"></a>
-        </div>
-        <div class="space-x-10">
-            <a href="pelaporan.html" class="hover:underline">Pelaporan</a>
-            <a href="#" class="hover:underline">LeaderBoard</a>
-            <a href="ecomart.html" class="hover:underline">EcoMart</a>
-            <a href="#" class="hover:underline">Komunitas</a>
-        </div>
+    <nav
+      class="fixed top-0 left-0 w-full bg-white shadow-lg px-20 py-2 flex justify-between items-center z-50"
+    >
+      <div class="flex items-center">
+        <a href="index.html"
+          ><img
+            src="logo ecolink resmi.png"
+            alt="EcoLink Logo"
+            class="h-16 w-40"
+        /></a>
+      </div>
+      <div class="space-x-10">
+        <a href="pelaporan.html" class="hover:underline text-myblue">Pelaporan</a>
+        <a href="#" class="hover:underline text-myblue">Leaderboard</a>
+        <a href="ecomart.html" class="hover:underline text-myblue">EcoMart</a>
+        <a href="#" class="hover:underline text-myblue">Komunitas</a>
+      </div>
     </nav>
 
     <!-- Hero Section with Background Image -->
-    <section class="relative h-screen">
-        <!-- Gambar background -->
-        <div class="absolute inset-0 bg-cover bg-center z-0"
-            style="background-image: url('full-shot-people-collecting-garbage.jpg');">
-        </div>
+    <section class="relative h-screen mt-7">
+      <!-- Gambar background -->
+      <div
+        class="absolute inset-0 bg-cover bg-center z-0"
+        style="background-image: url('full-shot-people-collecting-garbage.jpg')"
+      ></div>
 
-        <!-- Overlay hijau transparan -->
-        <div class="absolute inset-0 bg-green-500/60 z-10"></div>
-
-        <!-- Teks di tengah -->
-        <div class="relative z-20 flex items-center justify-center h-full text-center px-4">
-            <div>
-                <h1 class="text-4xl font-bold text-white mb-4">Laporkan Sampah Mu <br> Bersihkan Lingkungan Mu</h1>
-            </div>
+  <!-- Konten Overlap  -->
+  <div
+    class="relative z-20 flex items-center justify-around h-full text-center px-4"
+  >
+    <div>
+        <!-- Text - First Line -->
+      <h1 class="text-4xl font-bold text-left mb-1">
+        <span class="text-mygreen">Laporkan</span>
+        <span class="text-myblue">Sampah Mu</span> <br />
+      </h1>
+      <!-- Text - Second Line -->
+      <h1 class="text-4xl font-bold text-left">
+        <span class="text-myblue">Bersihkan</span>
+        <span class="text-mygreen">Lingkungan</span>
+        <span class="text-myblue">Mu</span>
+      </h1>
+      <!-- Text - Third Line - Tag -->
+       <h3 class="mt-2 text-lg text-left text-mygray/60">#JadiPahlawanSekarang</h3>
+       <!-- Aset "Download" -->
+        <div class="flex flex-row w-30 mt-5">
+          <a href="https://play.google.com/store">
+            <img src="asetdl1.png" alt="" class="h-10 mr-5">
+          </a>
+          <a href="https://www.apple.com/id/app-store/">
+            <img src="asetdl2.png" alt="" class="h-10">
+          </a>
         </div>
+    </div>
+    <!-- Image -->
+    <div>
+      <img src="asethp.png" alt="Aset HP">
+    </div>
+  </div>
+
+
+      <!-- Overlay hijau transparan -->
+      <div class="absolute inset-0 bg-white/90 z-10"></div>
     </section>
-
 
     <section>
-        <div class="relative text-4xl font-bold mt-10 px-20">
-            <h2>Layanan</h2>
-        </div>
-        <div class="px-20 mb-10 te">
-            <p>Lapor dan Daur Ulang Sampah Mu</p>
-        </div>
+      <div class="relative text-4xl font-bold mt-10 px-20">
+        <h2>Layanan</h2>
+      </div>
+      <div class="px-20 mb-10 te">
+        <p>Lapor dan Daur Ulang Sampah Mu</p>
+      </div>
     </section>
-</body>
-
+  </body>
 </html>
