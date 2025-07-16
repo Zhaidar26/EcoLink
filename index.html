@@ -1,109 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EcoLink</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
 
     <!-- Custom Tailwind Configuration -->
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              montserrat: ["Montserrat", "sans-serif"],
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ["Montserrat", "sans-serif"],
+                    },
+                    colors: {
+                        mygreen: "#6DCE4D",
+                        myblue: "#27405A",
+                        mygray: "#656565",
+                    },
+                },
             },
-            colors: {
-              mygreen: "#6DCE4D",
-              myblue: "#27405A",
-              mygray: "#656565",
-            },
-          },
-        },
-      };
+        };
     </script>
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- Navbar -->
-    <nav
-      class="fixed top-0 left-0 w-full bg-white shadow-lg px-20 py-2 flex justify-between items-center z-50"
-    >
-      <div class="flex items-center">
-        <a href="index.html"
-          ><img
-            src="logo ecolink resmi.png"
-            alt="EcoLink Logo"
-            class="h-16 w-40"
-        /></a>
-      </div>
-      <div class="space-x-10">
-        <a href="pelaporan.html" class="hover:underline text-myblue">Pelaporan</a>
-        <a href="#" class="hover:underline text-myblue">Leaderboard</a>
-        <a href="ecomart.html" class="hover:underline text-myblue">EcoMart</a>
-        <a href="#" class="hover:underline text-myblue">Komunitas</a>
-      </div>
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-lg px-20 py-2 flex justify-between items-center z-50">
+        <div class="flex items-center">
+            <a href="index.html"><img src="logo ecolink resmi.png" alt="EcoLink Logo" class="h-16 w-40" /></a>
+        </div>
+        <div class="space-x-10">
+            <a href="pelaporan.html" class="hover:underline text-myblue">Pelaporan</a>
+            <a href="#" class="hover:underline text-myblue">Leaderboard</a>
+            <a href="ecomart.html" class="hover:underline text-myblue">EcoMart</a>
+            <a href="#" class="hover:underline text-myblue">Komunitas</a>
+        </div>
     </nav>
 
     <!-- Hero Section with Background Image -->
     <section class="relative h-screen mt-7">
-      <!-- Gambar background -->
-      <div
-        class="absolute inset-0 bg-cover bg-center z-0"
-        style="background-image: url('full-shot-people-collecting-garbage.jpg')"
-      ></div>
+        <!-- Gambar background -->
+        <div class="absolute inset-0 bg-cover bg-center z-0"
+            style="background-image: url('full-shot-people-collecting-garbage.jpg')"></div>
 
-  <!-- Konten Overlap  -->
-  <div
-    class="relative z-20 flex items-center justify-around h-full text-center px-4"
-  >
-    <div>
-        <!-- Text - First Line -->
-      <h1 class="text-4xl font-bold text-left mb-1">
-        <span class="text-mygreen">Laporkan</span>
-        <span class="text-myblue">Sampah Mu</span> <br />
-      </h1>
-      <!-- Text - Second Line -->
-      <h1 class="text-4xl font-bold text-left">
-        <span class="text-myblue">Bersihkan</span>
-        <span class="text-mygreen">Lingkungan</span>
-        <span class="text-myblue">Mu</span>
-      </h1>
-      <!-- Text - Third Line - Tag -->
-       <h3 class="mt-2 text-lg text-left text-mygray/60">#JadiPahlawanSekarang</h3>
-       <!-- Aset "Download" -->
-        <div class="flex flex-row w-30 mt-5">
-          <a href="https://play.google.com/store">
-            <img src="asetdl1.png" alt="" class="h-10 mr-5">
-          </a>
-          <a href="https://www.apple.com/id/app-store/">
-            <img src="asetdl2.png" alt="" class="h-10">
-          </a>
+        <!-- Konten Overlap -->
+        <div class="relative z-20 flex items-center justify-between h-full text-center px-20">
+            <!-- Teks -->
+            <div>
+                <h1 class="text-5xl font-bold text-left mb-1">
+                    <span class="text-mygreen">Laporkan</span>
+                    <span class="text-myblue">Sampah Mu</span> <br />
+                </h1>
+                <h1 class="text-5xl font-bold text-left">
+                    <span class="text-myblue">Bersihkan</span>
+                    <span class="text-mygreen">Lingkungan</span>
+                    <span class="text-myblue">Mu</span>
+                </h1>
+                <h3 class="mt-2 text-2xl text-left text-mygray/60">#JadiPahlawanSekarang</h3>
+                <div class="flex flex-row w-100 mt-7">
+                    <a href="https://play.google.com/store">
+                        <img src="asetdl1.png" alt="" class="h-12 mr-5">
+                    </a>
+                    <a href="https://www.apple.com/id/app-store/">
+                        <img src="asetdl2.png" alt="" class="h-12">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gambar HP -->
+            <div class="md:ml-[-60px]">
+                <img src="asethp.png" alt="Aset HP">
+            </div>
         </div>
-    </div>
-    <!-- Image -->
-    <div>
-      <img src="asethp.png" alt="Aset HP">
-    </div>
-  </div>
 
-
-      <!-- Overlay hijau transparan -->
-      <div class="absolute inset-0 bg-white/90 z-10"></div>
+        <!-- Overlay hijau transparan -->
+        <div class="absolute inset-0 bg-white/90 z-10"></div>
     </section>
 
-    <section>
-      <div class="relative text-4xl font-bold mt-10 px-20">
-        <h2>Layanan</h2>
-      </div>
-      <div class="px-20 mb-10 te">
-        <p>Lapor dan Daur Ulang Sampah Mu</p>
-      </div>
+    <!-- Section Misi -->
+    <section class="flex flex-col md:flex-row items-center gap-8 px-20 mt-10">
+        <div class="w-full md:w-1/2 md:ml-[-90px]">
+            <img src="logo ecolink resmi1.png" alt="">
+        </div>
+        <div class="w-full md:w-1/2">
+            <div class="font-bold text-2xl mb-4">
+                <h2>Misi Kami Membuka Akses Pelaporan <br> Sampah untuk Semua Orang</h2>
+            </div>
+            <p>
+                Indonesia menghasilkan jutaan ton sampah setiap tahun, dan sebagian besar tidak tertangani dengan baik —
+                dibuang sembarangan, dibakar, atau berakhir di TPA. Minimnya sistem pelaporan membuat banyak titik
+                sampah liar luput dari perhatian. Sebagai negara berkembang, kita masih menghadapi tantangan besar dalam
+                hal infrastruktur lingkungan.
+                <br><br>
+                EcoLink hadir sebagai solusi pelaporan sampah yang mudah diakses oleh siapa pun. Cukup foto, tandai
+                lokasi, dan kirim laporan. Tim komunitas atau mitra pengelola kami akan membantu menindaklanjuti. Dengan
+                partisipasi masyarakat, pelaporan sampah bisa menjadi kunci perubahan menuju lingkungan yang lebih
+                bersih dan tertata.
+            </p>
+        </div>
     </section>
-  </body>
+
+    <!-- Layanan -->
+    <section class="mt-20">
+        <div class="text-4xl font-bold px-20 mb-2">
+            <span class="text-mygreen">Layanan</span>
+            <span class="text-myblue">Kami</span>
+        </div>
+        <div class="px-20 mb-10 text-mygray/60">
+            <p>Lapor dan Daur Ulang Sampah Mu</p>
+        </div>
+
+        <!-- Card Grid -->
+        <div class="px-20">
+            <div class="flex justify-end">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-24 mb-10">
+                    <!-- Card Pelaporan -->
+                    <div class="bg-white shadow-md rounded-lg p-6 w-60">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="pelaporan.png" alt="" class="h-10 w-10">
+                            <h3 class="text-xl font-semibold">Pelaporan</h3>
+                        </div>
+                        <p class="text-gray-600">Ambil foto sampah bermasalah, kirim laporan lewat aplikasi, petugas
+                            akan memverifikasi dan menindaklanjuti lapormu.</p>
+                    </div>
+                    <!-- Card Leaderboard -->
+                    <div class="bg-white shadow-md rounded-lg p-6 w-60">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="leaderboard.png" alt="" class="h-10 w-10">
+                            <h3 class="text-xl font-semibold">Leaderboard</h3>
+                        </div>
+                        <p class="text-gray-600">Ambil foto sampah bermasalah, kirim laporan lewat aplikasi, petugas
+                            akan memverifikasi dan menindaklanjuti lapormu.</p>
+                    </div>
+                    <!-- Card EcoMart -->
+                    <div class="bg-white shadow-md rounded-lg p-6 w-60">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="ecomart.png" alt="" class="h-10 w-10">
+                            <h3 class="text-xl font-semibold">EcoMart</h3>
+                        </div>
+                        <p class="text-gray-600">Ambil foto sampah bermasalah, kirim laporan lewat aplikasi, petugas
+                            akan memverifikasi dan menindaklanjuti lapormu.</p>
+                    </div>
+                    <!-- Card Komunitas -->
+                    <div class="bg-white shadow-md rounded-lg p-6 w-60">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="komunitas.png" alt="" class="h-10 w-10">
+                            <h3 class="text-xl font-semibold">Komunitas</h3>
+                        </div>
+                        <p class="text-gray-600">Ambil foto sampah bermasalah, kirim laporan lewat aplikasi, petugas
+                            akan memverifikasi dan menindaklanjuti lapormu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jenis sampah -->
+    <section class="mt-40">
+        <div class="text-4xl font-bold px-20 mb-2">
+            <span class="text-myblue">Jenis</span>
+            <span class="text-mygreen">Sampah</span>
+        </div>
+        <div class="px-20 mb-10 text-mygray/60">
+            <p>Lihat Semua Sampah yang Bisa di Daur Ulang</p>
+        </div>
+
+        <!-- card sampah -->
+        <div class="px-20">
+            <div class="flex justify-center">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-10">
+                    <!-- Card Pelaporan -->
+                    <div class="border border-2 bg-white p-10 w-90">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="kertas.png" alt="" class="h-10 w-10">
+                        </div>
+                        <p class="text-gray-600">Kertas</p>
+                    </div>
+                    <!-- Card Pelaporan -->
+                    <div class="border border-2 bg-white p-10 w-90">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="aluminum.png" alt="" class="h-10 w-10">
+                        </div>
+                        <p class="text-gray-600">Aluminium</p>
+                    </div>
+                    <!-- Card Pelaporan -->
+                    <div class="border border-2 bg-white p-10 w-90">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="plastik.png" alt="" class="h-10 w-10">
+                        </div>
+                        <p class="text-gray-600">Plastik</p>
+                    </div>
+                    <!-- Card Pelaporan -->
+                    <div class="border border-2 bg-white p-10 w-90">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="besilogam.png" alt="" class="h-10 w-10">
+                        </div>
+                        <p class="text-gray-600">Besi & Logam</p>
+                    </div>
+                    <!-- Card Pelaporan -->
+                    <div class="border border-2 bg-white p-10 w-90">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="botolkaca.png" alt="" class="h-10 w-10">
+                        </div>
+                        <p class="text-gray-600">Botol Kaca</p>
+                    </div>
+                    <!-- Card Pelaporan -->
+                    <div class="border border-2 bg-white p-10 w-90">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="elektronik.png" alt="" class="h-10 w-10">
+                        </div>
+                        <p class="text-gray-600">Elektronik</p>
+                    </div>
+                    <!-- Card Pelaporan -->
+                    <div class="border border-2 bg-white p-10 w-90">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="merek.png" alt="" class="h-10 w-10">
+                        </div>
+                        <p class="text-gray-600">Merek</p>
+                    </div>
+                    <!-- Card Pelaporan -->
+                    <div class="border-2 bg-white p-6 w-60 h-48 flex flex-col items-center justify-center text-center">
+                        <div class="mb-2">
+                            <img src="khusus.png" alt="" class="h-10 w-10">
+                        </div>
+                        <p class="text-gray-600">Khusus</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
 </html>
