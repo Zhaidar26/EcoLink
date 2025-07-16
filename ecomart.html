@@ -1,23 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoMart</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full bg-white shadow-lg px-20 py-2 flex justify-between items-center z-50">
-        <div class="flex items-center">
-            <a href="index.html"><img src="logo ecolink resmi[1].png" alt="EcoLink Logo" class="h-20 w-20"></a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EcoLink</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+          rel="stylesheet"
+        />
+    
+        <!-- Custom Tailwind Configuration -->
+        <script>
+          tailwind.config = {
+            theme: {
+              extend: {
+                fontFamily: {
+                  montserrat: ["Montserrat", "sans-serif"],
+                },
+                colors: {
+                  mygreen: "#6DCE4D",
+                  myblue: "#27405A",
+                  mygray: "#656565",
+                  myorange: "#E5670B",
+                },
+              },
+            },
+          };
+        </script>
+      </head>
+    
+      <body>
+        <!-- Navbar -->
+        <nav
+          class="fixed top-0 left-0 w-full bg-white shadow-lg px-20 py-2 flex justify-between items-center z-50"
+        >
+          <div class="flex items-center">
+            <a href="index.html"
+              ><img
+                src="logo ecolink resmi.png"
+                alt="EcoLink Logo"
+                class="h-16 w-40"
+            /></a>
+          </div>
+          <div class="space-x-10">
+              <a href="pelaporan.html" class="hover:underline hover:scale-105 transform transition duration-300 ease-in-out text-myblue"
+              >Pelaporan</a
+            >
+            <a href="leaderboard.html" class="hover:underline hover:scale-105 transform transition duration-300 ease-in-out text-myblue">Leaderboard</a>
+            <a href="ecomart.html" class="hover:underline hover:scale-105 transform transition duration-300 ease-in-out text-myblue">EcoMart</a>
+            <a href="komunitas.html" class="hover:underline hover:scale-105 transform transition duration-300 ease-in-out text-myblue">Komunitas</a>
+          </div>
+        </nav>
+
+        <!-- Hero Section with Background Image -->
+        <section class="relative h-screen mt-7 mb-10">
+          <!-- Gambar background -->
+          <div
+            class="absolute inset-0 bg-cover bg-center z-0"
+            style="background-image: url('full-shot-people-collecting-garbage.jpg')"
+          ></div>
+    
+          <!-- Konten Overlap -->
+          <div
+            class="relative z-20 flex items-center justify-between h-full text-center px-20"
+          >
+            <!-- Teks -->
+            <div>
+              <h1 class="text-5xl font-bold text-left mb-1">
+                <span class="text-mygreen">Laporkan</span>
+                <span class="text-myblue">Sampah Mu</span> <br />
+              </h1>
+              <h1 class="text-5xl font-bold text-left">
+                <span class="text-myblue">Bersihkan</span>
+                <span class="text-mygreen">Lingkungan</span>
+                <span class="text-myblue">Mu</span>
+              </h1>
+              <h3 class="mt-2 text-2xl text-left text-mygray/60">
+                #JadiPahlawanSekarang
+              </h3>
+              <div class="flex flex-row w-100 mt-7">
+                <a href="https://play.google.com/store">
+                  <img src="asetdl1.png" alt="" class="h-12 mr-5" />
+                </a>
+                <a href="https://www.apple.com/id/app-store/">
+                  <img src="asetdl2.png" alt="" class="h-12" />
+                </a>
+              </div>
+            </div>
+    
+            <!-- Gambar HP -->
+            <div class="md:ml-[-60px]">
+              <img src="asethp.png" alt="Aset HP" />
+            </div>
+          </div>
+    
+          <!-- Overlay putih transparan -->
+          <div class="absolute inset-0 bg-white/90 z-10"></div>
+        </section>
+
+        <!-- Bagian About EcoMart 1 -->
+        <section class="flex flex-row md:flex-row items-center px-20 mt-40 mb-40">
+            <!-- Text dan Icon Sub judul -->
+            <div class="text-4xl text-myblue w-fit">
+
+                <!-- img dan text jadi satu line -->
+                <div class="flex flex-row items-center">
+                  <img src="asetcart.png" alt="cart-logo" class="w-9 h-9 mr-2" />
+                  <span>Belanja Cerdas, Selamatkan Bumi </span> <br />
+                </div>
+                <span>Bareng EcoMart!</span>
+        
+                <!-- teks deskripsi -->
+                <div class="flex text-lg font-light text-mygray/80 mt-10 pr-10">
+                    <p>Lihat barang bekas yang masih layak jual atau bisa didaur ulang? Foto, lapor, 
+                        bantu lingkungan! Lewat fitur pelaporan EcoMart, kamu bisa bantu kasih tahu titik barang bekas seperti kardus, botol, kaleng, 
+                        dan lainnya yang masih bernilai. Cukup upload foto, tulis lokasi, dan kirim.</p>
+                </div>
+              </div>
+              <div class="h-80 w-80 items-center flex">
+                  <img src="ecomartlogo.png" alt="ecomart-logo" class="w-full size-max">
+              </div>
+        </section>
+        
+        <!-- Bagian About EcoMart 2 -->
+        <section class="flex flex-row md:flex-row items-center justify-evenly px-20 mt-40 mb-40">
+            <div class="w-65 items-center flex pr-20">
+                <img src="asethpeco.png" alt="ecomart-logo" class="w-full size-max">
+            </div>
+            <!-- Text dan Icon Sub judul -->
+            <div class="text-4xl text-myblue w-fit">
+
+                <!-- img dan text jadi satu line -->
+                <div class="flex flex-row items-center">
+                  <span>Beli Barang Daur Ulang di EcoMart </span> <br />
+                </div>
+        
+                <!-- teks deskripsi -->
+                <div class="text-lg font-light text-mygray/70 mt-10 pr-10">
+                    <span><p>1. Buka EcoMart lalu pilih barang yang akan kamu beli</p></span><br/>
+                    <span><p>2. Setelah memilih barang click barang tersebut</p></span> 
+                    <span><p>3. Lalu anda akan masuk pada halaman checkout</p></span> 
+                    <span><p>4. Setelah itu kamu bisa melakukan pembayaran </p></span> 
+                    <span><p>5. Lalu tunggu barang anda</p></span>
+                </div>
+              </div>
+        </section>
+
+        <!-- Catchphrase -->
+    <section class="mb-40 mt-40">
+        <div class="h-fit bg-black/10 pt-10 pb-10 pr-20 pl-20 text-3xl text-center font-semibold">
+            <h1>
+                "<span class="text-myblue">Ubah</span> <span class="text-myorange">Sampah</span><span class="text-myblue">,</span>
+                <span class="text-myblue">Jadi</span>
+                <span class="text-myblue">Barang</span><br><span class="text-myorange"> Berharga</span><span class="text-myblue">.</span>"
+            </h1>
         </div>
-        <div class="space-x-10">
-            <a href="pelaporan.html" class="hover:underline">Pelaporan</a>
-            <a href="#" class="hover:underline">LeaderBoard</a>
-            <a href="ecomart.html" class="hover:underline">EcoMart</a>
-            <a href="#" class="hover:underline">Komunitas</a>
+    </section>
+
+        <!-- kaki -->
+    <section>
+        <div class="bg-[#23374D] rounded-2xl shadow-lg p-10 m-5">
+            <div class="flex flex-col md:flex-row justify-between gap-10">
+
+                <!-- Kolom 1: Logo dalam card kecil + info -->
+                <div class="flex flex-col gap-4 max-w-sm">
+                    <div class="bg-white p-2 rounded-lg shadow-md w-fit">
+                        <img src="logo ecolink resmi.png" alt="EcoLink Logo" class="h-16">
+                    </div>
+                    <p class="text-white text-xl">Alamat: Jl. Raya Pecantingan Sekardangan,<br>Kabupaten Sidoarjo, Jawa Timur
+                    </p>
+                    <p class="text-white text-xl">WhatsApp: 085678126383</p>
+                    <p class="text-white text-xl">Surel: ecolink.id@gmail.com</p>
+                    <p class="text-white text-xl">Instagram: @ecolink.id</p>
+                </div>
+
+                <!-- Kolom 2: Navigasi -->
+                <div class="flex flex-col gap-4 text-white font-medium text-xl">
+                    <a href="pelaporan.html" class="hover:underline">Pelaporan</a>
+                    <a href="leaderboard.html" class="hover:underline">Leaderboard</a>
+                    <a href="ecomart.html" class="hover:underline">Ecomart</a>
+                    <a href="komunitas.html" class="hover:underline">Komunitas</a>
+                </div>
+
+                <!-- Kolom 3: Maps -->
+                <div class="flex flex-col gap-2">
+                    <h3 class="font-semibold text-white text-xl">Lokasi kami :</h3>
+                    <div class="w-[280px] h-[200px] rounded-lg overflow-hidden">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.299387616523!2d112.71744687411694!3d-7.4328394732072095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e4d0a95dbdd9%3A0xa993d812fe7493a3!2sSMK%20TELKOM%20Sidoarjo!5e0!3m2!1sid!2sid!4v1719214422494!5m2!1sid!2sid"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </nav>
-</body>
+    </section>
+  </body>
 </html>
