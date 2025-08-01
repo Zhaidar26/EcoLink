@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plastik</title>
+    <title>Plastik - EcoLink</title>
+    <link rel="icon" href="gambar/logo ecolink resmi1.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Custom Tailwind Configuration -->
     <script>
         tailwind.config = {
             theme: {
@@ -25,111 +25,99 @@
             },
         };
     </script>
+    <style>
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 </head>
 
-<body>
-    <nav class="w-full flex items-center justify-between bg-white px-6 py-3 shadow-md">
+<body class="font-montserrat">
+    <nav class="w-full flex items-center justify-between bg-white px-4 md:px-8 py-3 shadow-md sticky top-0 z-10">
         <div class="flex items-center gap-4">
             <a href="javascript:history.back()"
-                class="border-2 group inline-flex items-center px-4 py-2 rounded-lg transition hover:bg-gray-200">
-                <!-- Panah Kiri -->
+                class="border-2 group inline-flex items-center px-4 py-2 rounded-lg transition hover:bg-gray-200 text-sm md:text-base">
                 <svg class="w-5 h-5 mr-2 transform transition-transform duration-300 group-hover:-translate-x-1"
                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                 </svg>
                 Kembali
             </a>
-            <h2 class="text-myblue font-bold text-xl">Jenis Sampah</h2>
+            <h2 class="text-myblue font-bold text-lg md:text-xl">Jenis Sampah</h2>
         </div>
     </nav>
 
-    <!-- main content -->
-    <section class="mt-14">
-        <div class="flex items-center px-20 mb-14">
-            <img src="gambar/plastik.png" alt="Kertas" class="h-14">
-            <div class="text-4xl font-bold px-4 mb-2">
-                <span class="text-myblue">Plastik</span>
+    <main class="py-8 md:py-12">
+        <div class="px-4 md:px-8">
+            <div class="flex items-center mb-8">
+                <img src="gambar/plastik.png" alt="Plastik" class="h-12 md:h-14">
+                <h1 class="text-3xl md:text-4xl font-bold text-myblue ml-4">Plastik</h1>
+            </div>
+
+            <div class="hidden md:flex justify-end gap-2 mb-4">
+                <button type="button" onclick="slideLeft()"
+                    class="bg-gray-200 hover:bg-gray-300 p-2 rounded-full transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button type="button" onclick="slideRight()"
+                    class="bg-gray-200 hover:bg-gray-300 p-2 rounded-full transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
             </div>
         </div>
 
-        <!-- card -->
-        <!-- Tombol Geser -->
-        <div class="flex justify-end gap-2 px-4 mb-4">
-            <button type="button" onclick="slideLeft()" class="bg-gray-200 hover:bg-gray-300 p-2 rounded-full">
-                <!-- Heroicon kiri -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                </svg>
-            </button>
-            <button type="button" onclick="slideRight()" class="bg-gray-200 hover:bg-gray-300 p-2 rounded-full">
-                <!-- Heroicon kanan -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-            </button>
-        </div>
+        <div id="cardSlider"
+            class="flex overflow-x-auto gap-4 md:gap-6 px-4 md:px-8 pb-4 scrollbar-hide snap-x snap-mandatory">
 
-        <!-- Wrapper untuk 4 Card -->
-        <div class="overflow-hidden px-4">
-            <div class="max-w-[1080px] mx-auto">
-                <div id="cardSlider" class="flex transition-transform duration-500 ease-in-out">
-                    <!-- koran -->
-                    <div class="min-w-[250px] max-w-[250px] mx-2 border rounded-2xl">
-                        <img src="gambar/gelas_plastik.jpg" alt="" class="w-full h-40 object-cover rounded-t-2xl">
-                        <h2 class="text-center font-bold py-2">Gelas Plastik</h2>
-                    </div>
-                    <!-- buku bekas -->
-                    <div class="min-w-[250px] max-w-[250px] mx-2 border rounded-2xl">
-                        <img src="gambar/botol_biru_muda.jpg" alt="" class="w-full h-40 object-cover rounded-t-2xl">
-                        <h2 class="text-center font-bold py-2">Botol Biru Muda</h2>
-                    </div>
-                    <!-- kertas putih -->
-                    <div class="min-w-[250px] max-w-[250px] mx-2 border rounded-2xl">
-                        <img src="gambar/botol_warna.jpg" alt="" class="w-full h-40 object-cover rounded-t-2xl">
-                        <h2 class="text-center font-bold py-2">Botol Warna</h2>
-                    </div>
-                    <!-- kertas warna -->
-                    <div class="min-w-[250px] max-w-[250px] mx-2 border rounded-2xl">
-                        <img src="gambar/hd_blow.jpg" alt="" class="w-full h-40 object-cover rounded-t-2xl">
-                        <h2 class="text-center font-bold py-2">HD Blow</h2>
-                    </div>
-                    <!-- kertas buram -->
-                    <div class="min-w-[250px] max-w-[250px] mx-2 border rounded-2xl">
-                        <img src="gambar/perabot_plastik.jpg" alt="" class="w-full h-40 object-cover rounded-t-2xl">
-                        <h2 class="text-center font-bold py-2">Perabot Plastik</h2>
-                    </div>
-                </div>
+            <div class="flex-shrink-0 w-60 md:w-64 snap-start border rounded-2xl overflow-hidden shadow-sm">
+                <img src="gambar/gelas_plastik.jpg" alt="Gelas Plastik" class="w-full h-40 object-cover">
+                <h2 class="text-center font-semibold py-3 text-myblue">Gelas Plastik</h2>
             </div>
+
+            <div class="flex-shrink-0 w-60 md:w-64 snap-start border rounded-2xl overflow-hidden shadow-sm">
+                <img src="gambar/botol_biru_muda.jpg" alt="Botol Biru Muda" class="w-full h-40 object-cover">
+                <h2 class="text-center font-semibold py-3 text-myblue">Botol Biru Muda</h2>
+            </div>
+
+            <div class="flex-shrink-0 w-60 md:w-64 snap-start border rounded-2xl overflow-hidden shadow-sm">
+                <img src="gambar/botol_warna.jpg" alt="Botol Warna" class="w-full h-40 object-cover">
+                <h2 class="text-center font-semibold py-3 text-myblue">Botol Warna</h2>
+            </div>
+
+            <div class="flex-shrink-0 w-60 md:w-64 snap-start border rounded-2xl overflow-hidden shadow-sm">
+                <img src="gambar/hd_blow.jpg" alt="HD Blow" class="w-full h-40 object-cover">
+                <h2 class="text-center font-semibold py-3 text-myblue">HD Blow</h2>
+            </div>
+
+            <div class="flex-shrink-0 w-60 md:w-64 snap-start border rounded-2xl overflow-hidden shadow-sm">
+                <img src="gambar/perabot_plastik.jpg" alt="Perabot Plastik" class="w-full h-40 object-cover">
+                <h2 class="text-center font-semibold py-3 text-myblue">Perabot Plastik</h2>
+            </div>
+
         </div>
+    </main>
 
-        <!-- Script untuk scroll geser -->
-        <script>
-            let scrollIndex = 0;
-            const cardWidth = 266; // 250 + mx-2 (8px kiri + kanan = 16)
+    <script>
+        const slider = document.getElementById("cardSlider");
 
-            function slideRight() {
-                const container = document.getElementById("cardSlider");
-                const totalCards = container.children.length;
-                const maxScroll = totalCards - 4;
+        function slideRight() {
+            slider.scrollBy({ left: 280, behavior: 'smooth' });
+        }
 
-                if (scrollIndex < maxScroll) {
-                    scrollIndex++;
-                    container.style.transform = `translateX(-${scrollIndex * cardWidth}px)`;
-                }
-            }
-
-            function slideLeft() {
-                const container = document.getElementById("cardSlider");
-
-                if (scrollIndex > 0) {
-                    scrollIndex--;
-                    container.style.transform = `translateX(-${scrollIndex * cardWidth}px)`;
-                }
-            }
-        </script>
-    </section>
+        function slideLeft() {
+            slider.scrollBy({ left: -280, behavior: 'smooth' });
+        }
+    </script>
 </body>
 
 </html>

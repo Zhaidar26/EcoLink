@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaderboard</title>
+    <title>Leaderboard - EcoLink</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="gambar/logo ecolink resmi1.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
 
     <script>
@@ -27,71 +28,95 @@
     </script>
 </head>
 
-<body>
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full bg-white shadow-lg px-20 py-2 flex justify-between items-center z-50">
-        <div class="flex items-center">
-            <a href="index.html"><img src="gambar/logo ecolink resmi.png" alt="EcoLink Logo" class="h-16 w-40" /></a>
-        </div>
-        <div class="space-x-10">
-            <a href="pelaporan.html" class="hover:underline text-myblue">Pelaporan</a>
-            <a href="leaderboard.html" class="hover:underline text-myblue">Leaderboard</a>
-            <a href="ecomart.html" class="hover:underline text-myblue">EcoMart</a>
-            <a href="komunitas.html" class="hover:underline text-myblue">Komunitas</a>
-        </div>
-    </nav>
+<body class="font-montserrat">
+    <header class="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
+        <nav class="relative flex justify-between items-center px-4 sm:px-8 md:px-20 py-2">
+            <a href="index.html" class="flex-shrink-0">
+                <img src="gambar/logo ecolink resmi.png" alt="EcoLink Logo" class="h-14 md:h-16 w-auto" />
+            </a>
 
-    <!-- Hero Section with Background Image -->
-    <section class="relative h-screen mt-7">
-        <!-- Gambar background -->
+            <div class="hidden md:flex space-x-10 text-myblue font-semibold">
+                <a href="pelaporan.html" class="hover:underline">Pelaporan</a>
+                <a href="leaderboard.html" class="hover:underline">Leaderboard</a>
+                <a href="ecomart.html" class="hover:underline">EcoMart</a>
+                <a href="komunitas.html" class="hover:underline">Komunitas</a>
+            </div>
+
+            <label for="menu-toggle" class="md:hidden cursor-pointer text-myblue z-50">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </label>
+        </nav>
+    </header>
+
+    <input type="checkbox" id="menu-toggle" class="peer hidden" />
+
+    <label for="menu-toggle"
+        class="peer-checked:block hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"></label>
+
+    <div
+        class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out peer-checked:translate-x-0 z-50 md:hidden">
+        <div class="flex flex-col p-8 pt-20 space-y-6">
+            <label for="menu-toggle" class="absolute top-5 right-5 cursor-pointer text-myblue">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </label>
+            <a href="pelaporan.html" class="block text-myblue font-semibold hover:underline text-lg">Pelaporan</a>
+            <a href="leaderboard.html" class="block text-myblue font-semibold hover:underline text-lg">Leaderboard</a>
+            <a href="ecomart.html" class="block text-myblue font-semibold hover:underline text-lg">EcoMart</a>
+            <a href="komunitas.html" class="block text-myblue font-semibold hover:underline text-lg">Komunitas</a>
+        </div>
+    </div>
+
+    <!-- Hero Section (Corrected) -->
+    <section class="relative h-screen pt-20">
         <div class="absolute inset-0 bg-cover bg-center z-0"
             style="background-image: url('gambar/full-shot-people-collecting-garbage.jpg')"></div>
+        <div class="absolute inset-0 bg-white/90 z-10"></div>
 
-        <!-- Konten Overlap -->
-        <div class="relative z-20 flex items-center justify-between h-full text-center px-20">
-            <!-- Teks -->
-            <div>
-                <h1 class="text-5xl font-bold text-left mb-1">
+        <div
+            class="relative z-20 flex flex-col md:flex-row items-center justify-center md:justify-between h-full text-center md:text-left px-4 sm:px-8 md:px-20 gap-8">
+            <div class="w-full md:w-auto mt-8 md:mt-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-1">
                     <span class="text-mygreen">Laporkan</span>
                     <span class="text-myblue">Sampah Mu</span> <br />
                 </h1>
-                <h1 class="text-5xl font-bold text-left">
+                <h1 class="text-4xl md:text-5xl font-bold">
                     <span class="text-myblue">Bersihkan</span>
                     <span class="text-mygreen">Lingkungan</span>
                     <span class="text-myblue">Mu</span>
                 </h1>
-                <h3 class="mt-2 text-2xl text-left text-mygray/60">#JadiPahlawanSekarang</h3>
-                <div class="flex flex-row w-100 mt-7">
+                <h3 class="mt-2 text-xl md:text-2xl text-mygray/60">#JadiPahlawanSekarang</h3>
+                <div class="flex flex-row justify-center md:justify-start w-100 mt-7">
                     <a href="https://play.google.com/store">
-                        <img src="gambar/asetdl1.png" alt="" class="h-12 mr-5">
+                        <img src="gambar/asetdl1.png" alt="Download on Google Play" class="h-12 mr-5">
                     </a>
                     <a href="https://www.apple.com/id/app-store/">
-                        <img src="gambar/asetdl2.png" alt="" class="h-12">
+                        <img src="gambar/asetdl2.png" alt="Download on the App Store" class="h-12">
                     </a>
                 </div>
             </div>
 
-            <!-- Gambar HP -->
-            <div class="md:ml-[-60px]">
-                <img src="gambar/Group 19.png" alt="Aset HP" class="h-96">
+            <div class="flex-shrink-0">
+                <img src="gambar/Group 11 (1).png" alt="Aset HP" class="h-80 sm:h-96">
             </div>
         </div>
-
-        <!-- Overlay hijau transparan -->
-        <div class="absolute inset-0 bg-white/90 z-10"></div>
     </section>
 
-    <!-- Section Misi -->
-    <section class="flex flex-col md:flex-row items-center gap-x-20 px-20 mt-32">
-        <!-- Gambar -->
-        <div class="w-full md:w-auto flex justify-center md:justify-start">
+    <!-- Remainder of Leaderboard Page Content -->
+    <section class="flex flex-col md:flex-row items-center gap-8 md:gap-20 px-4 sm:px-8 md:px-20 py-16 md:py-24">
+        <div class="w-full md:w-1/3 flex justify-center">
             <img src="gambar/ChatGPT_Image_16_Jul_2025__06.55.04-removebg-preview 1.png" alt="Leaderboard Icon"
-                class="w-30 h-auto" />
+                class="w-48 h-auto" />
         </div>
 
-        <!-- Teks -->
-        <div class="w-full md:w-2/3 mt-20">
-            <h2 class="text-2xl font-bold mb-2 flex items-center gap-2">
+        <div class="w-full md:w-2/3 text-center md:text-left">
+            <h2 class="text-2xl font-bold mb-4 flex items-center justify-center md:justify-start gap-2">
                 🏆 <span>Leaderboard Desa<br class="block md:hidden"> Terbersih Indonesia</span>
             </h2>
             <p class="text-gray-600 leading-relaxed">
@@ -104,33 +129,34 @@
         </div>
     </section>
 
-    <!-- leaderboard -->
-    <section class="px-20">
-        <div class="px-20 mt-40">
-            <h2 class="text-center text-2xl font-bold">Top 10 Desa Terbersih Se Indonesia</h2>
+    <section class="px-4 sm:px-8 md:px-20 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold">Top 10 Desa Terbersih Se Indonesia</h2>
         </div>
-        <div class="flex felx-row bg-[#23374D] rounded-2xl shadow-lg p-10 m-5">
-            <div class="flex-1 pr-4">
-                <p class="text-white">1. Desa Panglipuran, Bali <br>
-                    2. Desa Wisata Semen, Jawa Timur <br>
-                    3. Desa Wisata CMC Tiga Warna, Jawa Timur <br>
-                    4. Desa Sendang, Wonogiri, Jawa Tengah <br>
-                    5. Desa Punggul, Badung, Bali <br>
-                    6. Desa Blang Kolak I, Aceh Tengah, Aceh <br>
-                    7. Desa Cibiru Wetan, Bandung, Jawa Barat <br>
-                    8. Desa Kumbung, Lombok Timur, Nusa Tenggara Barat <br>
-                    9. Desa Kabuna, Belu, Nusa Tenggara Timur <br>
-                    10. Desa Pohea, Sanana, Maluku Utara</p>
+        <div
+            class="flex flex-col md:flex-row items-center bg-[#23374D] rounded-2xl shadow-lg p-6 md:p-10 mx-auto max-w-5xl">
+            <div class="flex-1 w-full md:pr-4 mb-8 md:mb-0">
+                <ol class="text-white list-decimal list-inside space-y-2 text-base md:text-lg">
+                    <li>Desa Panglipuran, Bali</li>
+                    <li>Desa Wisata Semen, Jawa Timur</li>
+                    <li>Desa Wisata CMC Tiga Warna, Jawa Timur</li>
+                    <li>Desa Sendang, Wonogiri, Jawa Tengah</li>
+                    <li>Desa Punggul, Badung, Bali</li>
+                    <li>Desa Blang Kolak I, Aceh Tengah, Aceh</li>
+                    <li>Desa Cibiru Wetan, Bandung, Jawa Barat</li>
+                    <li>Desa Kumbung, Lombok Timur, Nusa Tenggara Barat</li>
+                    <li>Desa Kabuna, Belu, Nusa Tenggara Timur</li>
+                    <li>Desa Pohea, Sanana, Maluku Utara</li>
+                </ol>
             </div>
-            <div class="px-10 items-end justify-end ">
-                <img src="gambar/ecolink.png" alt="" class="w-60 h-60 object-contain">
+            <div class="flex items-center justify-center">
+                <img src="gambar/ecolink.png" alt="Ecolink Trophy Icon" class="w-48 h-48 md:w-60 md:h-60 object-contain">
             </div>
         </div>
     </section>
 
-    <!-- Catchphrase -->
-    <section class="mb-40 mt-40">
-        <div class="h-fit bg-black/10 pt-10 pb-10 pr-20 pl-20 text-3xl text-center font-semibold">
+    <section class="my-16 md:my-24">
+        <div class="bg-black/10 py-10 px-4 sm:px-8 md:px-20 text-2xl md:text-3xl text-center font-semibold">
             <h1>
                 "<span class="text-myblue">Beraksi Untuk</span> <span class="text-myorange">Bersih</span><span
                     class="text-myblue">,</span> <br>
@@ -140,46 +166,42 @@
         </div>
     </section>
 
-    <!-- kaki -->
-    <section>
-        <div class="bg-[#23374D] rounded-2xl shadow-lg p-10 m-5">
-            <div class="flex flex-col md:flex-row justify-between gap-10">
-
-                <!-- Kolom 1: Logo dalam card kecil + info -->
+    <footer class="px-4 pb-4">
+        <div class="bg-[#23374D] rounded-2xl shadow-lg p-6 md:p-10">
+            <div class="flex flex-col lg:flex-row justify-between gap-10">
                 <div class="flex flex-col gap-4 max-w-sm">
                     <div class="bg-white p-2 rounded-lg shadow-md w-fit">
                         <img src="gambar/logo ecolink resmi.png" alt="EcoLink Logo" class="h-16">
                     </div>
-                    <p class="text-white text-xl">Alamat: Jl. Raya Pecantingan Sekardangan,<br>Kabupaten Sidoarjo, Jawa
+                    <p class="text-white text-base md:text-lg">Alamat: Jl. Raya Pecantingan Sekardangan,<br>Kabupaten
+                        Sidoarjo, Jawa
                         Timur
                     </p>
-                    <p class="text-white text-xl">WhatsApp: 085678126383</p>
-                    <p class="text-white text-xl">Surel: ecolink.id@gmail.com</p>
-                    <p class="text-white text-xl">Instagram: @ecolink.id</p>
+                    <p class="text-white text-base md:text-lg">WhatsApp: 085678126383</p>
+                    <p class="text-white text-base md:text-lg">Surel: ecolink.id@gmail.com</p>
+                    <p class="text-white text-base md:text-lg">Instagram: @ecolink.id</p>
                 </div>
 
-                <!-- Kolom 2: Navigasi -->
-                <div class="flex flex-col gap-4 text-white font-medium text-xl">
-                    <a href="#" class="hover:underline">Pelaporan</a>
-                    <a href="#" class="hover:underline">Leaderboard</a>
-                    <a href="#" class="hover:underline">Ecomart</a>
-                    <a href="#" class="hover:underline">Komunitas</a>
+                <div class="flex flex-col gap-4 text-white font-medium text-base md:text-lg">
+                    <h3 class="font-semibold text-xl mb-2">Navigasi</h3>
+                    <a href="pelaporan.html" class="hover:underline">Pelaporan</a>
+                    <a href="leaderboard.html" class="hover:underline">Leaderboard</a>
+                    <a href="ecomart.html" class="hover:underline">Ecomart</a>
+                    <a href="komunitas.html" class="hover:underline">Komunitas</a>
                 </div>
 
-                <!-- Kolom 3: Maps -->
                 <div class="flex flex-col gap-2">
                     <h3 class="font-semibold text-white text-xl">Lokasi kami :</h3>
-                    <div class="w-[280px] h-[200px] rounded-lg overflow-hidden">
+                    <div class="w-full max-w-xs h-[200px] rounded-lg overflow-hidden">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.987058371959!2d112.72276627400393!3d-7.466679792544906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e6d71181af21%3A0x4232ab0204ccbfe5!2sSMK%20TELKOM%20Sidoarjo!5e0!3m2!1sid!2sid!4v1752638637141!5m2!1sid!2sid"
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-
             </div>
         </div>
-    </section>
+    </footer>
 </body>
 
 </html>

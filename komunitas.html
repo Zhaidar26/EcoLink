@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaderboard</title>
+    <title>Komunitas - EcoLink</title>
+    <link rel="icon" href="gambar/logo ecolink resmi1.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
 
@@ -27,115 +28,117 @@
     </script>
 </head>
 
-<body>
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full bg-white shadow-lg px-20 py-2 flex justify-between items-center z-50">
-        <div class="flex items-center">
-            <a href="index.html"><img src="gambar/logo ecolink resmi.png" alt="EcoLink Logo" class="h-16 w-40" /></a>
-        </div>
-        <div class="space-x-10">
-            <a href="pelaporan.html" class="hover:underline text-myblue">Pelaporan</a>
-            <a href="leaderboard.html" class="hover:underline text-myblue">Leaderboard</a>
-            <a href="ecomart.html" class="hover:underline text-myblue">EcoMart</a>
-            <a href="komunitas.html" class="hover:underline text-myblue">Komunitas</a>
-        </div>
-    </nav>
+<body class="font-montserrat">
+    <header class="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
+        <nav class="relative flex justify-between items-center px-4 sm:px-8 md:px-20 py-2">
+            <a href="index.html" class="flex-shrink-0">
+                <img src="gambar/logo ecolink resmi.png" alt="EcoLink Logo" class="h-14 md:h-16 w-auto" />
+            </a>
+            <div class="hidden md:flex space-x-10 text-myblue font-semibold">
+                <a href="pelaporan.html" class="hover:underline">Pelaporan</a>
+                <a href="leaderboard.html" class="hover:underline">Leaderboard</a>
+                <a href="ecomart.html" class="hover:underline">EcoMart</a>
+                <a href="komunitas.html" class="hover:underline">Komunitas</a>
+            </div>
+            <label for="menu-toggle" class="md:hidden cursor-pointer text-myblue z-50">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </label>
+        </nav>
+    </header>
 
-    <!-- Hero Section with Background Image -->
-    <section class="relative h-screen mt-7">
-        <!-- Gambar background -->
+    <input type="checkbox" id="menu-toggle" class="peer hidden" />
+    <label for="menu-toggle"
+        class="peer-checked:block hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"></label>
+    <div
+        class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out peer-checked:translate-x-0 z-50 md:hidden">
+        <div class="flex flex-col p-8 pt-20 space-y-6">
+            <label for="menu-toggle" class="absolute top-5 right-5 cursor-pointer text-myblue">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </label>
+            <a href="pelaporan.html" class="block text-myblue font-semibold hover:underline text-lg">Pelaporan</a>
+            <a href="leaderboard.html" class="block text-myblue font-semibold hover:underline text-lg">Leaderboard</a>
+            <a href="ecomart.html" class="block text-myblue font-semibold hover:underline text-lg">EcoMart</a>
+            <a href="komunitas.html" class="block text-myblue font-semibold hover:underline text-lg">Komunitas</a>
+        </div>
+    </div>
+
+    <section class="relative h-screen pt-20">
         <div class="absolute inset-0 bg-cover bg-center z-0"
             style="background-image: url('gambar/full-shot-people-collecting-garbage.jpg')"></div>
-
-        <!-- Konten Overlap -->
-        <div class="relative z-20 flex items-center justify-between h-full text-center px-20">
-            <!-- Teks -->
-            <div>
-                <h1 class="text-5xl font-bold text-left mb-1">
+        <div class="absolute inset-0 bg-white/90 z-10"></div>
+        <div
+            class="relative z-20 flex flex-col md:flex-row items-center justify-center md:justify-between h-full text-center md:text-left px-4 sm:px-8 md:px-20 gap-8">
+            <div class="w-full md:w-auto mt-8 md:mt-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-1">
                     <span class="text-mygreen">Laporkan</span>
                     <span class="text-myblue">Sampah Mu</span> <br />
                 </h1>
-                <h1 class="text-5xl font-bold text-left">
+                <h1 class="text-4xl md:text-5xl font-bold">
                     <span class="text-myblue">Bersihkan</span>
                     <span class="text-mygreen">Lingkungan</span>
                     <span class="text-myblue">Mu</span>
                 </h1>
-                <h3 class="mt-2 text-2xl text-left text-mygray/60">#JadiPahlawanSekarang</h3>
-                <div class="flex flex-row w-100 mt-7">
+                <h3 class="mt-2 text-xl md:text-2xl text-mygray/60">#JadiPahlawanSekarang</h3>
+                <div class="flex flex-row justify-center md:justify-start w-100 mt-7">
                     <a href="https://play.google.com/store">
-                        <img src="gambar/asetdl1.png" alt="" class="h-12 mr-5">
+                        <img src="gambar/asetdl1.png" alt="Download on Google Play" class="h-12 mr-5">
                     </a>
                     <a href="https://www.apple.com/id/app-store/">
-                        <img src="gambar/asetdl2.png" alt="" class="h-12">
+                        <img src="gambar/asetdl2.png" alt="Download on the App Store" class="h-12">
                     </a>
                 </div>
             </div>
-
-            <!-- Gambar HP -->
-            <div class="md:ml-[-60px]">
-                <img src="gambar/Group 21.png" alt="Aset HP" class="h-96">
+            <div class="flex-shrink-0">
+                <img src="gambar/Group 21.png" alt="Aset HP" class="h-80 sm:h-96">
             </div>
         </div>
-
-        <!-- Overlay hijau transparan -->
-        <div class="absolute inset-0 bg-white/90 z-10"></div>
     </section>
 
-    <!-- Section Misi -->
-    <section class="flex flex-col md:flex-row items-center gap-x-20 px-20 mt-32">
-        <!-- Gambar -->
-        <div class="w-full md:w-auto flex justify-center md:justify-start">
-            <img src="gambar/community.png" alt="Leaderboard Icon" class="w-30 h-auto" />
+    <section
+        class="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16 px-4 sm:px-8 md:px-20 py-16 md:py-24">
+        <div class="flex-shrink-0">
+            <img src="gambar/community.png" alt="Community Icon" class="w-48 h-auto" />
         </div>
-
-        <!-- Teks -->
-        <div class="w-full md:w-2/3 mt-20">
-            <h2 class="text-2xl font-bold mb-2 flex items-center gap-2 text-myblue">
-                <span>🤝 Gabung Komunitas <br> Peduli Sampah!</span>
+        <div class="w-full md:w-2/3 text-center md:text-left max-w-2xl">
+            <h2 class="text-3xl font-bold mb-4 text-myblue">
+                🤝 Gabung Komunitas <br class="sm:hidden"> Peduli Sampah!
             </h2>
             <p class="text-gray-600 leading-relaxed">
                 Kamu peduli sama lingkungan dan pengen ikut ambil peran? Gabung aja bareng komunitas EcoLink!
-                Lewat fitur komunitas, kamu bisa terhubung dengan orang-orang yang punya semangat yang sama ikut aksi
+                Lewat fitur komunitas, kamu bisa terhubung dengan orang-orang yang punya semangat yang sama, ikut aksi
                 bersih-bersih,
                 edukasi lingkungan, sampai bantu menindaklanjuti laporan sampah dari warga sekitar.
             </p>
         </div>
     </section>
 
-    <!-- Bagian About EcoMart 2 -->
-    <section class="flex flex-row md:flex-row items-center justify-evenly px-20 mt-40 mb-40">
-        <div class="w-65 items-center flex pr-20">
-            <img src="gambar/assetkomunitas.png" alt="ecomart-logo" class="w-full size-max">
+    <section
+        class="flex flex-col-reverse md:flex-row items-center justify-center gap-12 md:gap-16 px-4 sm:px-8 md:px-20 py-16 md:py-24">
+        <div class="flex-shrink-0">
+            <img src="gambar/assetkomunitas.png" alt="Community Asset" class="w-64 md:w-80" />
         </div>
-        <!-- Text dan Icon Sub judul -->
-        <div class="text-4xl text-myblue w-fit">
-
-            <!-- img dan text jadi satu line -->
-            <div class="flex flex-row items-center font-bold">
-                <span>Gabung Bersama Komunitas Kami</span> <br />
-            </div>
-
-            <!-- teks deskripsi -->
-            <div class="text-lg font-light text-mygray/70 mt-10 pr-10">
-                <span>
-                    <p>1. Buka Halaman Komunitas di Ecolink</p>
-                </span>
-                <span>
-                    <p>2. Pilih Komunitas sesuai dengan minat dan daerah mu</p>
-                </span>
-                <span>
-                    <p>3. Klik tombol “ Gabung Komunitas “</p>
-                </span>
-                <span>
-                    <p>4. Isi data singkat untuk mengenalkan dirimu</p>
-                </span>
-            </div>
+        <div class="text-center md:text-left max-w-xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-myblue mb-6">
+                Gabung Bersama Komunitas Kami
+            </h2>
+            <ol class="text-lg font-light text-mygray/80 list-decimal list-inside space-y-3">
+                <li>Buka Halaman Komunitas di Ecolink.</li>
+                <li>Pilih Komunitas sesuai dengan minat dan daerahmu.</li>
+                <li>Klik tombol “Gabung Komunitas”.</li>
+                <li>Isi data singkat untuk mengenalkan dirimu.</li>
+            </ol>
         </div>
     </section>
 
-    <!-- Catchphrase -->
-    <section class="mb-40 mt-40">
-        <div class="h-fit bg-black/10 pt-10 pb-10 pr-20 pl-20 text-3xl text-center font-semibold">
+    <section class="my-16 md:my-24">
+        <div class="h-fit bg-black/10 pt-10 pb-10 px-4 text-2xl md:text-3xl text-center font-semibold">
             <h1>
                 <span class="text-myblue">"</span><span class="text-myblue">Lingkungan</span> <span
                     class="text-myorange">Bersih</span>
@@ -147,46 +150,40 @@
         </div>
     </section>
 
-    <!-- kaki -->
-    <section>
-        <div class="bg-[#23374D] rounded-2xl shadow-lg p-10 m-5">
-            <div class="flex flex-col md:flex-row justify-between gap-10">
-
-                <!-- Kolom 1: Logo dalam card kecil + info -->
+    <footer class="px-4 pb-4">
+        <div class="bg-[#23374D] rounded-2xl shadow-lg p-6 md:p-10">
+            <div class="flex flex-col lg:flex-row justify-between gap-10">
                 <div class="flex flex-col gap-4 max-w-sm">
                     <div class="bg-white p-2 rounded-lg shadow-md w-fit">
                         <img src="gambar/logo ecolink resmi.png" alt="EcoLink Logo" class="h-16">
                     </div>
-                    <p class="text-white text-xl">Alamat: Jl. Raya Pecantingan Sekardangan,<br>Kabupaten Sidoarjo, Jawa
+                    <p class="text-white text-base md:text-lg">Alamat: Jl. Raya Pecantingan Sekardangan,<br>Kabupaten
+                        Sidoarjo, Jawa
                         Timur
                     </p>
-                    <p class="text-white text-xl">WhatsApp: 085678126383</p>
-                    <p class="text-white text-xl">Surel: ecolink.id@gmail.com</p>
-                    <p class="text-white text-xl">Instagram: @ecolink.id</p>
+                    <p class="text-white text-base md:text-lg">WhatsApp: 085678126383</p>
+                    <p class="text-white text-base md:text-lg">Surel: ecolink.id@gmail.com</p>
+                    <p class="text-white text-base md:text-lg">Instagram: @ecolink.id</p>
                 </div>
-
-                <!-- Kolom 2: Navigasi -->
-                <div class="flex flex-col gap-4 text-white font-medium text-xl">
-                    <a href="#" class="hover:underline">Pelaporan</a>
-                    <a href="#" class="hover:underline">Leaderboard</a>
-                    <a href="#" class="hover:underline">Ecomart</a>
-                    <a href="#" class="hover:underline">Komunitas</a>
+                <div class="flex flex-col gap-4 text-white font-medium text-base md:text-lg">
+                    <h3 class="font-semibold text-xl mb-2">Navigasi</h3>
+                    <a href="pelaporan.html" class="hover:underline">Pelaporan</a>
+                    <a href="leaderboard.html" class="hover:underline">Leaderboard</a>
+                    <a href="ecomart.html" class="hover:underline">Ecomart</a>
+                    <a href="komunitas.html" class="hover:underline">Komunitas</a>
                 </div>
-
-                <!-- Kolom 3: Maps -->
                 <div class="flex flex-col gap-2">
                     <h3 class="font-semibold text-white text-xl">Lokasi kami :</h3>
-                    <div class="w-[280px] h-[200px] rounded-lg overflow-hidden">
+                    <div class="w-full max-w-xs h-[200px] rounded-lg overflow-hidden">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.987058371959!2d112.72276627400393!3d-7.466679792544906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e6d71181af21%3A0x4232ab0204ccbfe5!2sSMK%20TELKOM%20Sidoarjo!5e0!3m2!1sid!2sid!4v1752638637141!5m2!1sid!2sid"
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-
             </div>
         </div>
-    </section>
+    </footer>
 </body>
 
 </html>
